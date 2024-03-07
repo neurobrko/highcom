@@ -725,8 +725,6 @@ progress {
 
 .container,
 .container-fluid,
-.container-4xl,
-.container-3xl,
 .container-xxl,
 .container-xl,
 .container-lg,
@@ -763,16 +761,6 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
-  }
-}
-@media (min-width: 1600px) {
-  .container-3xl, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
-  }
-}
-@media (min-width: 1800px) {
-  .container-4xl, .container-3xl, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
   }
 }
@@ -4561,9 +4549,7 @@ textarea.form-control-lg {
 .navbar > .container-md,
 .navbar > .container-lg,
 .navbar > .container-xl,
-.navbar > .container-xxl,
-.navbar > .container-3xl,
-.navbar > .container-4xl {
+.navbar > .container-xxl {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
@@ -15452,12 +15438,26 @@ textarea.form-control-lg {
   background: linear-gradient(to left, #86c232, #9ece5b);
   color: #6c757d;
 }
-.contact-section .contact-column .contact-wrapper button .fas {
+.contact-section .contact-column .contact-wrapper button .icon {
+  float: left;
+}
+.contact-section .contact-column .contact-wrapper button .icon .fas {
   color: #86c232;
   background-color: #fff;
   border-radius: 50%;
   padding: 0.25em;
   margin-right: 0.25em;
+}
+.contact-section .contact-column .contact-wrapper button .text {
+  padding-right: 42px;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 575.98px) {
+  .contact-section .contact-column .contact-wrapper button .text {
+    padding-right: 0;
+    text-align-last: left;
+  }
 }
 .contact-section .form-column {
   background: linear-gradient(to left, #bfc0c1, #d1d2d3);

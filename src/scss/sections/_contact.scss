@@ -85,13 +85,29 @@
                     color: $gray-600
                 }
 
-                .fas {
-                    color: $hc-main;
-                    background-color: $white;
-                    border-radius: 50%;
-                    padding: 0.25em;
-                    margin-right: 0.25em;
+                .icon {
+                    float: left;
+                    
+                    .fas {
+                        color: $hc-main;
+                        background-color: $white;
+                        border-radius: 50%;
+                        padding: 0.25em;
+                        margin-right: 0.25em;
+                    }
                 }
+                
+                .text {
+                    padding-right: 42px;
+                    text-align: center;
+                    width: 100%;
+
+                    @include media-breakpoint-down(sm) {
+                        padding-right: 0;
+                        text-align-last: left;
+                    }
+                }
+
             }
         }
 
