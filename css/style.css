@@ -15280,6 +15280,9 @@ textarea.form-control-lg {
   margin: auto;
   color: #adb5bd;
 }
+.intro-section .intro-text--hx {
+  color: #86c232;
+}
 @media (max-width: 991.98px) {
   .intro-section .intro-text--hx {
     text-align: center;
