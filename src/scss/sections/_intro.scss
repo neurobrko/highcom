@@ -1,0 +1,57 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.intro-section {
+
+  .intro-text {
+    margin: auto;
+    color: $gray-500;
+
+    &--hx {
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
+    }
+
+    &--fs {
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
+    }
+
+    &--p {
+      color: $white;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 5.5rem;
+  }
+
+  @include hc-gradient(right, $secondary-gradient);
+
+  .carousel {
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: auto;
+    margin: 0 auto;
+
+    .carousel-inner {
+
+      .carousel-item {
+
+        img {
+          border-radius: 2rem;
+          padding: .5rem;
+        }
+      }
+    }
+  }
+}
+
+.intro-wave {
+  @include hc-gradient(right, $secondary-gradient);
+}

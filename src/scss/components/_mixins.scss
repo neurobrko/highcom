@@ -1,0 +1,20 @@
+@use '../custom' as *;
+
+// SCROLL TRANSITION
+@mixin scrollTransition($property, $prop-value, $trans-time: 0.75s) {
+    #{$property}: $prop-value;
+    transition: $property, $trans-time;
+}
+
+// CUSTOM GRADIENT
+@mixin hc-gradient($direction, $list) {
+    background: linear-gradient(to $direction, $list);
+}
+
+// ABSOLUTE CENTER
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

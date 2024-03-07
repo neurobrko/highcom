@@ -1,0 +1,95 @@
+// import bootstrap functions
+@import "../../src/bootstrap/scss/functions";
+
+// highcom colors
+// $hc-main: #ff5926;
+$hc-main: #86c232;
+
+$hc-tint1: mix(#fff, $hc-main, 20%);
+$hc-tint2: mix(#fff, $hc-main, 35%);
+$hc-tint3: mix(#fff, $hc-main, 50%);
+$hc-tint4: mix(#fff, $hc-main, 75%);
+$hc-shade1: mix(#000, $hc-main, 25%);
+
+// highcom complementary
+// $hcc-main: #26ccff;
+$hcc-main: #474b4f;
+$hcc-tint75: mix(#fff, $hcc-main, 25%);
+$hcc-tint50: mix(#fff, $hcc-main, 50%);
+$hcc-tint35: mix(#fff, $hcc-main, 65%);
+$hcc-tint25: mix(#fff, $hcc-main, 75%);
+$hcc-shade25: mix(#000, $hcc-main, 25%);
+
+// primary override
+$primary: $hc-main;
+$primary-bg-subtle: $hc-tint3;
+$primary-text: $hc-main;
+$primary-border-subtle: $hc-tint2;
+
+// secondary override
+$secondary: $hcc-main;
+$secondary-bg-subtle: $hcc-tint25;
+$secondary-text: $hcc-shade25;
+$secondary-border-subtle: $hcc-tint50;
+
+// white to black
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+// INTRO GRADIENT
+$primary-gradient: $hc-main, $hc-tint1;
+$primary-gradient2: $hc-main, $hc-tint2;
+$secondary-gradient: $hcc-main, $hcc-tint75;
+$form-gradient: $hcc-tint35, $hcc-tint25;
+
+// grid-breakpoints override
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    3xl: 1600px,
+    4xl: 1800px
+);
+
+// container-max-widths override
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px,
+    3xl: 1320px,
+    4xl: 1320px
+);
+
+// typography override
+$font-family-base: "Ubuntu", sans-serif;
+$display-font-weight: 500;
+
+// navbar override
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $hc-tint2;
+$navbar-light-active-color: $hc-tint3;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-light-toggler-border-color: rgba($hc-tint1, .95);
+
+// plocha
+$plocha-bg: $hc-tint3;
+
+// TESTING
+
+
+// import bootstrap
+@import "../../src/bootstrap/scss/bootstrap";

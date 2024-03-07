@@ -1,0 +1,142 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.contact-section {
+    margin-top: 2rem;
+
+    .menu-anchor {
+
+        @include media-breakpoint-down(md) {
+            top: -90px;
+        }
+    }
+
+    .contact-text {
+        &--hx {
+            @include media-breakpoint-down(xl) {
+                font-size: 2.5rem;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+
+
+    .contact-column {
+        .contact-wrapper {
+            padding: 0;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .contact-text {
+
+                &--hx {
+                    text-align: center;
+                    @include hc-gradient(left, $primary-gradient2);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                &--fs {
+                    text-align: center;
+                    color: $gray-600;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            button {
+                @include hc-gradient(right, $primary-gradient2);
+                padding: 0.25em;
+                font-size: 1.75em;
+                width: 75%;
+                text-align: left;
+                border: none;
+                display: block;
+                margin: auto;
+                margin-bottom: .5em;
+                color: $white;
+                font-weight: 500;
+
+                @include media-breakpoint-down(xl) {
+                    width: 90%;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    width: 50%;
+                }
+
+                @include media-breakpoint-down(md) {
+                    width: 75%;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+
+                &:hover {
+                    @include hc-gradient(left, $primary-gradient);
+                    color: $gray-600
+                }
+
+                .fas {
+                    color: $hc-main;
+                    background-color: $white;
+                    border-radius: 50%;
+                    padding: 0.25em;
+                    margin-right: 0.25em;
+                }
+            }
+        }
+
+
+    }
+
+    .form-column {
+        @include hc-gradient(left, $form-gradient);
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 1.5em;
+        }
+
+        .contact-text {
+            &--hx {
+                text-align: center;
+                color: $gray-600;
+            }
+        }
+
+        .form-label {
+            color: $gray-700;
+            margin-bottom: 0;
+        }
+
+        .form-control {
+            margin-bottom: 0.75rem;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        .send-button {
+            border: none;
+            margin-top: 0.5em;
+            color: $white;
+            font-size: 1.25rem;
+            font-weight: 500;
+            @include hc-gradient(right, $primary-gradient);
+
+            &:hover {
+                @include hc-gradient(left, $primary-gradient);
+                color: $gray-600
+            }
+        }
+    }
+}

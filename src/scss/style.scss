@@ -1,0 +1,12 @@
+@use 'custom';
+
+// components
+@use 'components/fonts';
+
+// sections
+@use 'sections/navbar';
+@use 'sections/intro';
+@use 'sections/what';
+@use 'sections/ref';
+@use 'sections/contact';
+@use 'sections/footer';

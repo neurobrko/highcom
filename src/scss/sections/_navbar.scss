@@ -1,0 +1,175 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu {
+  font-weight: 500;
+  font-size: 1.25rem;
+
+  @include media-breakpoint-down(md) {
+    background: $primary;
+    box-shadow: 0px 0.5rem 1rem rgba($gray-800, 0.15);
+
+    .nav-link {
+      color: $hc-tint4;
+      text-align: right;
+    }
+
+  }
+
+  .navbar-toggler {
+    margin-right: 2rem;
+    background-color: $hc-tint4;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+    }
+  }
+
+  .navbar-nav {
+    margin-right: 2rem;
+
+  }
+
+  .navbar-brand {
+    img {
+      width: 200px;
+      margin-left: 2rem;
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
+      }
+
+      &.logo_color {
+        display: inline-block;
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+
+      &.logo_white {
+        display: none;
+
+        @include media-breakpoint-down(md) {
+          display: inline-block;
+          width: 150px;
+        }
+      }
+    }
+
+    // SVG LOGO
+    svg {
+      margin-left: 2rem;
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
+      }
+
+      @include media-breakpoint-down(md) {
+        display: inline-block;
+        width: 150px;
+        height: 50px;
+      }
+
+      .logo-high {
+        fill: $black;
+
+        @include media-breakpoint-down(md) {
+          fill: $white;
+        }
+      }
+
+      .logo-com {
+        fill: $hc-main;
+
+        @include media-breakpoint-down(md) {
+          fill: $white;
+        }
+      }
+
+      .logo-antena {
+        fill: $primary;
+
+        @include media-breakpoint-down(md) {
+          fill: $white;
+        }
+      }
+
+      .logo-circle1 {
+        fill: $hc-tint1;
+
+        @include media-breakpoint-down(md) {
+          fill: $white;
+        }
+      }
+
+      .logo-circle2 {
+        fill: $hc-tint2;
+
+        @include media-breakpoint-down(md) {
+          fill: $white;
+        }
+      }
+
+      .logo-circle3 {
+        fill: $hc-tint3;
+
+        @include media-breakpoint-down(md) {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &.scrolled {
+      @include scrollTransition(background-color, rgba($white, 0.9));
+      // box-shadow: 0px 2px 4px $white;
+
+      .navbar-brand {
+        svg {
+          @include scrollTransition(width, 120px);
+          @include scrollTransition(height, 40px);
+        }
+      }
+    }
+  }
+
+}
+
+.top-wave {
+  @include hc-gradient(right, $secondary-gradient);
+  margin-top: 20px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-top: -0.8rem;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-top: -1.6rem;
+  }
+
+  @include media-breakpoint-up(3xl) {
+    margin-top: -2.4rem;
+  }
+
+  @include media-breakpoint-up(4xl) {
+    margin-top: -3.2rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    path {
+      &.scrolled {
+        @include scrollTransition(fill-opacity, 0, 0.25s)
+      }
+    }
+  }
+}

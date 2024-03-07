@@ -1,0 +1,35 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu-anchor {
+    position: relative;
+    top: -56px;
+
+}
+
+.what-section {
+
+    .what-text {
+
+        &--hx {
+            text-align: center;
+            @include hc-gradient(left, $primary-gradient2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 0.5rem;
+
+            @include media-breakpoint-down(md) {
+                margin-top: 2rem;
+            }
+        }
+
+        &--fs {
+            text-align: center;
+            color: $gray-600;
+        }
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+}

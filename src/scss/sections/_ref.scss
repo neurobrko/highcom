@@ -1,0 +1,32 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.ref-section {
+
+    .ref-hx {
+        text-align: center;
+        @include hc-gradient(left, $primary-gradient2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 3.5rem 0 2rem 0;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 2rem;
+        }
+    }
+
+    .m-fix {
+        margin: 0;
+    }
+
+    .ref-logo {
+        width: 150px;
+        display: block;
+        margin: 0 auto 2rem;
+        filter: grayscale(100%) opacity(75%);
+
+        &:hover {
+            filter: none;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.footer {
+    background-color: $gray-900;
+    color: $gray-200;
+
+    .container {
+
+        a {
+            text-decoration: none;
+        }
+
+        .ftr {
+
+            &--company {
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+
+            &--section {
+                font-weight: 500;
+            }
+
+
+            &--tx {
+                margin-bottom: 0;
+                font-size: .85rem;
+            }
+
+            .name {
+                font-weight: 700;
+            }
+        }
+
+        .ftr-logo {
+
+            img {
+                width: 120px;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+        }
+    }
+
+}
