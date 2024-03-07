@@ -3,12 +3,19 @@
 
 .intro-section {
 
+  .main-title {
+    margin: auto;
+    color: $gray-500;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
   .intro-text {
     margin: auto;
     color: $gray-500;
 
     &--hx {
-      color: $hc-main;
       @include media-breakpoint-down(lg) {
         text-align: center;
       }

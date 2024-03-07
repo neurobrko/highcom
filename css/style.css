@@ -15276,12 +15276,16 @@ textarea.form-control-lg {
 .intro-section {
   background: linear-gradient(to right, #474b4f, #75787b);
 }
+.intro-section .main-title {
+  margin: auto;
+  color: #adb5bd;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
 .intro-section .intro-text {
   margin: auto;
   color: #adb5bd;
-}
-.intro-section .intro-text--hx {
-  color: #86c232;
 }
 @media (max-width: 991.98px) {
   .intro-section .intro-text--hx {
